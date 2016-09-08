@@ -1,0 +1,48 @@
+/*mobile-first*/
+.row {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+body {
+  color: #b9b9b9;
+}
+h1 {
+  text-transform: uppercase;
+  color: #a4d7d5;
+}
+h2 {
+  color: #a4d7d5;
+}
+
+#landing-page {
+  background-image: url("../img/hero.png");
+  background-size: cover;
+  background-position:top;
+  min-height: 50vh;
+  text-align: center;
+}
+
+#hero-text {
+  position: relative;
+  top: 25vh;
+  transform: translateY(-50%);
+}
+#hero-text h1,
+#hero-text h2 {
+  color: white;
+}
+
+/*tablets and desktops*/
+@media screen and (min-width: 768px) {
+
+  #landing-page {
+    min-height: 60vw;
+  }
+  #hero-text {
+    top: 30vw;
+  }
+
+}
