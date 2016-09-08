@@ -1,6 +1,23 @@
 $(document).ready(function() {
+
+    /* Navigation smooth scroll */
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+
     $("#lightSlider").lightSlider({
-        item: 3,
+        item: 1,
         autoWidth: true,
         slideMove: 1, // slidemove will be 1 if loop is true
         slideMargin: 0,
@@ -39,7 +56,7 @@ $(document).ready(function() {
         enableTouch:true,
         enableDrag:true,
         freeMove:true,
-        swipeThreshold: 40,
+        swipeThreshold: 10,
 
         responsive : [],
 

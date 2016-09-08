@@ -1,19 +1,25 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,500';
 /*mobile-first*/
 .row {
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 5%;
 }
 
 body {
   color: #b9b9b9;
+  font-family: 'Roboto', sans-serif;
 }
 h1 {
   text-transform: uppercase;
-  color: #a4d7d5;
+  font-size: 150%;
+  font-weight: 500;
 }
 h2 {
+  font-size: 120%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+h1, h2 {
   color: #a4d7d5;
 }
 
@@ -23,6 +29,13 @@ h2 {
   background-position:top;
   min-height: 50vh;
   text-align: center;
+}
+
+#logo {
+  position: absolute;
+  left: 5%;
+  width: 10%;
+  max-width: 53px;
 }
 
 #hero-text {
@@ -35,6 +48,38 @@ h2 {
   color: white;
 }
 
+#menu {
+  position: relative;
+  width: 100vw;
+  left: -15px;
+}
+.navbar-default {
+  background-color: #a4d7d5;
+  color: white;
+  border: none;
+}
+
+/* some color overrides */
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  color:#a4d7d5;
+  background-color: white;
+}
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+  color: white;
+  background-color: #a4d7d5;
+}
+.navbar-header {
+  text-align: center;
+}
+.navbar-toggle {
+  float: none;
+  margin-left: 15px;
+}
+
 /*tablets and desktops*/
 @media screen and (min-width: 768px) {
 
@@ -43,6 +88,17 @@ h2 {
   }
   #hero-text {
     top: 30vw;
+  }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    text-align: center;
+  }
+  .navbar-nav,
+  .navbar-nav>li {
+    float: none;
+  }
+  .nav>li {
+    display: inline-block;
   }
 
 }
