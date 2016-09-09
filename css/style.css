@@ -96,10 +96,41 @@ h1, h2 {
   float: none;
   margin-left: 15px;
 }
+
 #sliding-images {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+#sliding-images li img {
+  padding: 0;
+}
+#prev-next {
+  text-align: center;
+  padding: 10px;
+}
+.slick-arrow {
+  color: white;
+  background-color: #a4d7d5;
+}
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default.active:hover,
+.btn-default:active.focus,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.open>.dropdown-toggle.btn-default.focus,
+.open>.dropdown-toggle.btn-default:focus,
+.open>.dropdown-toggle.btn-default:hover,
+.btn,
+.btn:focus,
+.btn:active,
+.btn:hover {
+  color: white;
+  background-color: #a4d7d5;
+  border: none;
+  outline: none;
+  border-radius: 0;
 }
 
 #footer {
