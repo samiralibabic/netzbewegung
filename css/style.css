@@ -1,13 +1,19 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:400,500';
-/*mobile-first*/
-.row {
-  padding: 5%;
-}
 
 body {
   color: #b9b9b9;
   font-family: 'Roboto', sans-serif;
 }
+
+/*mobile-first*/
+.container-fluid {
+  padding-bottom: 120px;
+  position: relative;
+}
+.row {
+  padding: 5%;
+}
+
 h1 {
   text-transform: uppercase;
   font-size: 150%;
@@ -59,7 +65,18 @@ h1, h2 {
   border: none;
 }
 
-/* some color overrides */
+/* some bootstrap overrides */
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-default .navbar-toggle {
+  border: none;
+}
+
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
@@ -79,12 +96,43 @@ h1, h2 {
   float: none;
   margin-left: 15px;
 }
+#sliding-images {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #a4d7d5;
+  color: white;
+  text-align: center;
+}
+#footer button,
+#footer button:focus {
+  font-size: 20px;
+  margin: 20px;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #a4d7d5;
+  height: 50px;
+  width: 50px;
+}
+#footer-logo {
+  margin: 10px;
+  width: 30px;
+}
 
 /*tablets and desktops*/
 @media screen and (min-width: 768px) {
 
   #landing-page {
     min-height: 60vw;
+    max-height: 100vh;
   }
   #hero-text {
     top: 30vw;

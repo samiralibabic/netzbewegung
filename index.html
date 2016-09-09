@@ -9,10 +9,10 @@
   <title>Netzbewegung GmbH</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" media="screen">
-  <link rel="stylesheet" href="css/lightslider.css" media="screen">
+  <!-- <link rel="stylesheet" href="css/lightslider.css" media="screen"> -->
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="js/lightslider.js"></script>
+  <!-- <script src="js/lightslider.js"></script> -->
   <script src="js/script.js"></script>
 </head>
 <body data-spy="scroll" data-target="#navigation">
@@ -69,7 +69,7 @@
     </section>
     <section class="row" id="slider">
       <div class="col-xs-12">
-        <ul id="lightSlider">
+        <ul id="sliding-images">
           <li><img src="img/slide1.png" alt="" class="col-xs-12 col-sm-4 img-responsive" /></li>
           <li><img src="img/slide2.png" alt="" class="col-xs-12 col-sm-4 img-responsive" /></li>
           <li><img src="img/slide3.png" alt="" class="col-xs-12 col-sm-4 img-responsive" /></li>
@@ -92,9 +92,13 @@
       </div>
     </section>
     <footer class="row" id="footer">
-      <p>
-        Netzbewegung GmbH - Pforzheimer Straße 134 - D-76275 Ettlingen
-      </p>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFooter" aria-expanded="false" aria-controls="collapseFooter">+</button>
+      <div class="collapse" id="collapseFooter">
+        <img src="img/logo.png" alt="logo" id="footer-logo" />
+        <p>
+          Netzbewegung GmbH - Pforzheimer Straße 134 - D-76275 Ettlingen
+        </p>
+      </div>
     </footer>
   </div>
 </body>
