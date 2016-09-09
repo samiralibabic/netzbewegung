@@ -8,7 +8,7 @@ $(document).ready(function() {
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
             $('html, body').animate({
-              scrollTop: target.offset().top
+              scrollTop: (target.offset().top - 50)
             }, 1000);
             return false;
           }
@@ -20,7 +20,7 @@ $(document).ready(function() {
     $('#footer button').click(function() {
         var val = $(this).html();
         if ($(this).html() == '+') {
-            $(this).html("x");
+            $(this).html("✕");
         } else { $(this).html('+'); }
     });
 
@@ -30,5 +30,18 @@ $(document).ready(function() {
         prevArrow: '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>',
         nextArrow: '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>'
     });
+
+    /* fix menu to top on scroll */
+    $(window).scroll(function() {
+        if ($('body').scrollTop() >= $('#landing-page').outerHeight()) {
+            $('#menu').addClass('fixed');
+            $('#text1').css('padding-top', '100px');
+        } else {
+            $('#menu').removeClass('fixed');
+            $('#text1').css('padding-top', '5%');
+        }
+    });
+
+
 
   });
