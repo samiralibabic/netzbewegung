@@ -8,27 +8,12 @@ $(document).ready(function() {
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
             $('html, body').animate({
-              scrollTop: (target.offset().top - 50)
+              scrollTop: (target.offset().top - 0)
             }, 1000);
             return false;
           }
         }
       });
-    });
-
-    /* footer button clicks */
-    $('#footer button').click(function() {
-        var val = $(this).html();
-        if ($(this).html() == '+') {
-            $(this).html("✕");
-        } else { $(this).html('+'); }
-    });
-
-    /* slider */
-    $('#sliding-images').slick({
-        appendArrows: $('#prev-next'),
-        prevArrow: '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>',
-        nextArrow: '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>'
     });
 
     /* fix menu to top on scroll */
@@ -42,6 +27,29 @@ $(document).ready(function() {
         }
     });
 
+    /* animate first image */
+    var end = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    var animation = 'animated fadeIn';
+    $('#img1').waypoint(function() {
+        $('#img1').css('visibility', 'visible');
+        $('#img1').addClass(animation);
+    }, {offset: '50%'});
 
+    /* footer button clicks */
+    $('#footer button').click(function() {
+        var val = $(this).html();
+        if ($(this).html() == '+') {
+            $(this).html("✕");
+        } else { $(this).html('+'); }
+    });
+
+    /* image-slider */
+    $('#sliding-images').slick({
+        appendArrows: $('#prev-next'),
+        prevArrow: '<button type="button" class="btn btn-default" id="slide-left"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>',
+        nextArrow: '<button type="button" class="btn btn-default" id="slide-right"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>',
+        variableWidth: true,
+        centerMode: true
+    });
 
   });
